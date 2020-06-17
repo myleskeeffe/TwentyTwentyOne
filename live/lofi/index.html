@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta name="description" content="21Live presents live quizzes, music & entertainment to help you do your best.">
+  <meta name="keywords" content="livestream, study, music">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/21live.css">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+</head>
+
+<body>
+  <div class="21bodywrapper">
+    <header>
+      <div class="navWrapper">
+        <nav>
+          <img src="/img/21live-white-logo.png" class="navLogo">
+          <div class="navRight">
+            <ul>
+              <li style="margin-right: 20px;">
+                <a href="https://twenty-twenty.one/live">Home</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="b21divider">
+        <svg class="c21divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 891" preserveAspectRatio="none">
+          <path
+            d="M599.584,822.919c-44.785,80.821-119.287,117.066-234.217-73.567C189.68,457.944-0.417,866.426-0.417,866.426L-0.3,891h599.884V822.919z">
+          </path>
+          <path
+            d="M-0.417,889h599.884l0.117-338.682c0,0-190.098-1009.247-365.784-289.259C118.87,732.062,44.368,642.512-0.417,442.825V889z">
+          </path>
+          <path
+            d="M599.584,730.24c-44.785,109.957-119.287,159.27-234.217-100.089C101.5,62.5-0.417,789.432-0.417,789.432L-0.3,891h599.884V730.24z">
+          </path>
+        </svg>
+      </div>
+    </header>
+    <div class="a21pagecontent">
+      <div class="streamBox">
+        <iframe id="streamEmbed" style="display: inline;" width="800" height="450"
+          src="https://www.youtube.com/embed/pUzl5ftdWcY" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="chat" style='height:450px'></div>
+        <p class="mobileHint">Chat not loading? Try requesting as a desktop site if you are on mobile - or <a
+            href="https://www.youtube.com/watch?v=pUzl5ftdWcY">access the stream directly here.</a></p>
+
+      </div>
+    </div>
+    <footer>
+      <p>21 Live is an experimental service, therefor we cannot guarantee uptime. We try our best to ensure licenses are
+        followed/obtained for media served through our platform.</p>
+      <p>&copy; 21 Live</p>
+    </footer>
+  </div>
+  <script>
+    let frame = document.createElement("iframe");
+    frame.referrerPolicy = "origin";
+    frame.src = "https://www.youtube.com/live_chat?v=pUzl5ftdWcY&embed_domain=" + window.location.hostname;
+    frame.frameBorder = "0";
+    frame.id = "chat-embed";
+    let wrapper = document.getElementById("chat");
+    wrapper.appendChild(frame); 
+  </script>
+</body>
+
+</html>
